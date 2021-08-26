@@ -35,6 +35,7 @@ body {
 
 #nav {
     display: flex;
+    flex-wrap: wrap;
     margin: auto;
     width: 85%;
     height: 15vh;
@@ -70,7 +71,7 @@ body {
 #banner {
     animation: fadein 1s;
     font-family: 'Playfair Display', serif;
-    font-size: 5em;
+    font-size: calc(1.3em + 3.2vw);
     letter-spacing: 0.1em;
     display: flex;
     align-items: center;
@@ -100,21 +101,13 @@ body {
     fill: rgb(180, 180, 180);
 }
 
-#body {
+.content {
     margin: auto;
     width: 85%;
     min-height: 70vh;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-}
-
-#left-container {
-    height: 90%;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
 }
 
 @keyframes slideInFromLeft {
@@ -138,6 +131,21 @@ body {
     }
 }
 
+#left-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#right-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding-left: 3em;
+    justify-content: space-around;
+}
+
 h2 {
     font-family: 'Playfair Display', serif;
     animation: .7s cubic-bezier(0.165, 0.84, 0.44, 1) 0s 1 slideInFromLeft;
@@ -155,14 +163,6 @@ h2 {
     font-size: calc(1.6em + 0.1vw);
     line-height: 131.3%;
     letter-spacing: 0.1em;
-}
-
-#right-container {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    padding-left: 3em;
-    justify-content: space-around;
 }
 
 #members {
@@ -183,6 +183,7 @@ h2 {
     min-height: 0;
     flex: 1;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .member-text {
@@ -211,9 +212,9 @@ h3 {
 }
 
 #spotify-container {
-    border-right: 1px solid rgb(80, 80, 80);
-    height: 90%;
     flex: 1;
+    border-right: 1px solid rgb(80, 80, 80);
+    width: 30%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -221,9 +222,9 @@ h3 {
 }
 
 #youtube-container {
-    height: 90%;
-    display: flex;
     flex: 1;
+    width: 30%;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
@@ -275,6 +276,7 @@ button:hover {
 
 #spil {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
 }
@@ -335,28 +337,23 @@ button:hover {
 }
 
 #left-contact {
-    height: 80%;
-    flex: 1;
     display: flex;
+    flex: 1;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: start;
 }
 
 #right-contact {
-    height: 100%;
     display: flex;
-    flex: 1;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    flex: 1;
+    padding-left: 100px;
+    align-items: flex-start;
 }
 
-#contact-form {
-    padding-left: 100px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
-    justify-content: space-evenly;
+#left-contact>* {
+    padding: 1.5rem 0;
 }
 
 input,
@@ -400,7 +397,7 @@ textarea {
     transition: .3s;
     text-decoration: none;
     color: white;
-    font-size: 40px;
+    font-size: calc(1.2rem + 1vw);
     letter-spacing: 0.1em;
 }
 
@@ -413,4 +410,28 @@ textarea {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+
+@media (max-width: 1500px) {
+    #kontakt {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    #left-contact {
+        margin-bottom: 2rem;
+        justify-content: space-evenly;
+    }
+    #right-contact {
+        padding: 0;
+    }
+    #contact-form {
+        padding: 0;
+    }
+    #email-input {
+        padding: 10px 0 10px 20px;
+    }
+    input,
+    textarea {
+        margin-bottom: 2rem;
+    }
 }

@@ -246,7 +246,7 @@ h2 {
     .instruments {
         text-align: center;
     }
-    .member {
+    .member:not(.last) {
         padding-bottom: 60px;
     }
     .member>* {
@@ -267,6 +267,10 @@ h3 {
     font-weight: 300;
     font-size: 28px;
     letter-spacing: 0.06em;
+}
+
+#glasba {
+    animation: 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0s 1 fadein;
 }
 
 #spotify-container {
@@ -446,6 +450,7 @@ textarea {
 }
 
 #contacts-container {
+    animation: .7s cubic-bezier(0.165, 0.84, 0.44, 1) 0s 1 slideInFromLeftDelayed;
     display: flex;
     flex-direction: column;
     padding-top: 0.5vw;

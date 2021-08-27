@@ -150,8 +150,8 @@ h2 {
     font-family: 'Playfair Display', serif;
     animation: .7s cubic-bezier(0.165, 0.84, 0.44, 1) 0s 1 slideInFromLeft;
     font-weight: bold;
-    font-size: calc(4em + 1vw);
-    line-height: 120px;
+    font-size: calc(2.5em + 2vw);
+    line-height: calc(1em + 3.5vw);
     letter-spacing: 0.06em;
     margin: 0;
 }
@@ -378,11 +378,22 @@ textarea {
     height: 50%;
 }
 
-#contact-container {
+#contacts-container {
     display: flex;
+    flex-direction: column;
+    padding-top: 0.5vw;
+}
+
+#contact-container {
+    padding-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    padding-left: 60px;
     color: white;
+}
+
+#contact-icon {
+    width: 40px;
 }
 
 #separator-dot {
@@ -390,14 +401,14 @@ textarea {
     height: 10px;
     background-color: grey;
     border-radius: 50%;
-    margin: 0 40px;
+    margin: 0 calc(1rem + 1.5vw);
 }
 
 #contact-info a {
     transition: .3s;
     text-decoration: none;
     color: white;
-    font-size: calc(1.2rem + 1vw);
+    font-size: calc(0.7rem + 1.1vw);
     letter-spacing: 0.1em;
 }
 
@@ -420,8 +431,15 @@ textarea {
     #left-contact {
         margin-bottom: 2rem;
         justify-content: space-evenly;
+        align-items: center;
+    }
+    h2,
+    p {
+        text-align: center;
+        align-self: center;
     }
     #right-contact {
+        align-items: center;
         padding: 0;
     }
     #contact-form {
@@ -429,6 +447,9 @@ textarea {
     }
     #email-input {
         padding: 10px 0 10px 20px;
+    }
+    #text-input {
+        height: 300px;
     }
     input,
     textarea {

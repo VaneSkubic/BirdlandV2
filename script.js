@@ -1,3 +1,6 @@
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
 function hamburgerMenu() {
     var nav = document.getElementById("nav");
     var cross = document.getElementById("cross");
@@ -19,7 +22,4 @@ function hamburgerMenu() {
         nav.style.display = "flex";
         header.style.backgroundColor = '#242424';
     }
-
-
-
 }

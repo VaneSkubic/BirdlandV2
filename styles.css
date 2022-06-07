@@ -495,7 +495,7 @@ textarea {
     height: calc(0.4rem + 0.1vw);
     background-color: grey;
     border-radius: 50%;
-    margin: 0 calc(1rem + 1.5vw);
+    margin: 0 calc(0rem + 1.5vw);
 }
 
 #contact-info a {

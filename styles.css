@@ -412,6 +412,23 @@ button:hover {
     color: #8C8C8C;
 }
 
+@media (max-width: 1150px) {
+    #spil {
+        flex-direction: column;
+        margin: 4rem 0;
+        text-align: center;
+    }
+    #spil-left {
+        margin: 0.5rem 0;
+    }
+    #spil-middle {
+        margin: 0.5rem 0;
+    }
+    #spil-right {
+        margin: 1rem 0;
+    }
+}
+
 #left-contact {
     display: flex;
     flex: 1;

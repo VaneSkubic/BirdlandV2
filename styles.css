@@ -563,6 +563,12 @@ textarea {
     display: none;
 }
 
+.line {
+    width: 100%;
+    border-top: 1px solid rgb(46, 46, 46);
+    display: none;
+}
+
 @media (max-width: 950px) {
     #nav {
         display: none;
@@ -602,5 +608,14 @@ textarea {
     }
     #nav a {
         padding-bottom: 30px;
+    }
+    #spil-middle {
+        padding: 0;
+    }
+    .content {
+        width: 100%;
+    }
+    .line {
+        display: block;
     }
 }
